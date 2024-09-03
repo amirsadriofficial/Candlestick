@@ -1,3 +1,53 @@
 .container {
-  padding: 1rem;
+  height: 40px;
+  position: relative;
+  z-index: 1000;
+  width: 500px;
+}
+.container_middle_line {
+  width: 1px;
+  border-left: 1px dashed #000;
+  height: 100%;
+  position: absolute;
+  transform: translateX(-50%);
+  top: -35%;
+  left: 50%;
+  transform-origin: center center;
+}
+.candle_container {
+  position: relative;
+  height: 2px;
+  border: 1px solid #ddd;
+  background: lightgray;
+  margin: 20px 0;
+  cursor: pointer;
+  z-index: 1200;
+}
+.candle_body {
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  border-radius: 10px;
+  height: 16px;
+  z-index: 1400;
+  transition: width 0.5s ease left 0.5s ease;
+}
+.candle_shadow {
+  position: absolute;
+  top: 50%;
+  height: 8px;
+  border-radius: 10px;
+  transform: translateY(-50%);
+  z-index: 1900;
+  transition: width 0.5s ease left 0.5s ease;
+}
+.tooltip {
+  position: absolute;
+  background: #cac9c9;
+  padding: 3px 7px;
+  border-radius: 7px;
+  color: black;
+  display: flex;
+  gap: 5px;
+  z-index: 30000;
 }
